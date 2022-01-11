@@ -1,6 +1,6 @@
 # Weather Widget with NextJS and Styled Components
 
-Live Demo: https://nextjs-weather-widget-with-styled-components.vercel.app/
+**Live Demo**: https://nextjs-weather-widget-with-styled-components.vercel.app/
 
 NextJS application using the weatherapi.com API service to retrieve the weather information. 
 
