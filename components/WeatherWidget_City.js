@@ -46,7 +46,7 @@ export default function WeatherWidget_City() {
     return (
         <WeatherWidgetWrapper>  
             <div className="row">
-                <WidgetTitle>With City Name</WidgetTitle>
+                <WidgetTitle>With City Name (Tokyo)</WidgetTitle>
             </div>
             <div className="row">
                 <IconArea>{weather.icon}</IconArea>
