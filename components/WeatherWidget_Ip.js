@@ -46,7 +46,7 @@ export default function WeatherWidget_Ip() {
     return (
         <WeatherWidgetWrapper>  
             <div className="row">
-                <WidgetTitle>With IP</WidgetTitle>
+                <WidgetTitle>With IP (FIX IP from London)</WidgetTitle>
             </div>
             <div className="row">
                 <IconArea>{weather.icon}</IconArea>
