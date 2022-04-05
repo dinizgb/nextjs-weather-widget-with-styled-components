@@ -22,7 +22,7 @@ const WidgetTitle = styled.h3`
     font-weight: 400;
     letter-spacing: 4px;
     color: #eee;
-    margin-top: 85px;
+    margin-top: 107px;
 `
 
 const TempText = styled.div`
