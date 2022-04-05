@@ -2,16 +2,13 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    background: #f5f6fe;
+    background: #001e3c;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     color: #000;
-  }
-  main {
-    min-height: calc(100vh - 125px);
   }
   *{
     margin: 0;
@@ -27,6 +24,9 @@ const GlobalStyle = createGlobalStyle`
       -ms-transition: 0.2s;
       transition: 0.2s;
     }
+  }
+  main {
+    min-height: calc(100vh - 125px);
   }
   .container {
     max-width: 1024px;
@@ -45,6 +45,10 @@ const GlobalStyle = createGlobalStyle`
   }
   .space-between{
     justify-content: space-between;
+  }
+  h1, h2{
+    color: #3399ff;
+    font-weight: 300;
   }
 `
 
