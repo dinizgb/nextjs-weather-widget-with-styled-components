@@ -4,17 +4,20 @@ import styled from 'styled-components';
 
 const WeatherWidgetWrapper = styled.div`
     min-width: 250px;
-    background: #fff;
-    border: 1px solid #e8eaff;
+    background: #173A5E;
+    border: 1px solid #124d8a;
     border-radius: 6px;
     padding: 15px 15px 0 15px;
     margin: 20px;
+    &:hover {
+        background: #124d8a;
+    }
 `
 
-const WidgetTitle = styled.h1`
+const WidgetTitle = styled.h3`
     font-size: 16px;
-    font-weight: bold;
-    color: #666;
+    font-weight: 400;
+    color: #eee;
 `
 
 const IconArea = styled.div`
@@ -23,9 +26,13 @@ const IconArea = styled.div`
 
 const TempText = styled.div`
     font-size: 30px;
-    font-weight: bold;
-    color: #666;
+    font-weight: 300;
+    color: #eee;
     margin-top: 24px;
+    @media (max-width: 1024px){
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 `
 
 export default function WeatherWidget_LatLon() {
