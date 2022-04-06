@@ -42,6 +42,11 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    @media (max-width: 1024px){
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
   .space-between{
     justify-content: space-between;
@@ -49,6 +54,7 @@ const GlobalStyle = createGlobalStyle`
   h1, h2{
     color: #3399ff;
     font-weight: 300;
+    margin-bottom: 15px;
   }
 `
 

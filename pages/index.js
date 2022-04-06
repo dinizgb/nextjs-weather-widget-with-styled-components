@@ -94,9 +94,9 @@ export default function Home() {
               title={'Honolulu'}
               />
               <GifWidget 
-              params={'Cape Town'} 
+              params={'Cairo'} 
               days={1}
-              title={'Cape Town'}
+              title={'Cairo'}
               />
               <GifWidget 
               params={'Dubai'} 

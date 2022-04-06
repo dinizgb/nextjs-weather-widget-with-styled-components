@@ -29,6 +29,10 @@ const TempText = styled.div`
     font-weight: 300;
     color: #eee;
     margin-top: 24px;
+    @media (max-width: 1024px){
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 `
 
 export default function WeatherWidget_LatLon() {

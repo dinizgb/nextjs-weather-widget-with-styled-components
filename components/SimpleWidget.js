@@ -24,11 +24,15 @@ const IconArea = styled.div`
     padding: 0 5px;
 `
 
-const TempText = styled.div`
+const TempText = styled.span`
     font-size: 30px;
     font-weight: 300;
     color: #eee;
     margin-top: 24px;
+    @media (max-width: 1024px){
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 `
 
 export default function SimpleWidget(props) {
