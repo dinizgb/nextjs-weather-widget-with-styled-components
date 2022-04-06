@@ -16,11 +16,6 @@ const StyledWrapper = styled.div`
 `;
 
 export default function Home() {
-  const today = new Date();
-  const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-  const day = weekday[today.getDay()];
-  const hour = today.getHours() + ":" + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
-
   return (
     <>
     <Head>
@@ -62,24 +57,18 @@ export default function Home() {
               days={1}
               title={'São Paulo'}
               pexelsQuery={'São Paulo'}
-              currentDay={day}
-              hour={hour}
               />
               <PexelsPhotoWidget 
               params={'London'} 
               days={1}
               title={'London'}
               pexelsQuery={'London'}
-              currentDay={day}
-              hour={hour}
               />
               <PexelsPhotoWidget 
               params={'Hong Kong'} 
               days={1}
               title={'Hong Kong'}
               pexelsQuery={'Hong Kong'}
-              currentDay={day}
-              hour={hour}
               />
             </div>
           </StyledWrapper>
