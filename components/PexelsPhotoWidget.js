@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from 'next/image';
 import styled from 'styled-components';
 
 const WeatherWidgetWrapper = styled.div`
@@ -52,7 +51,17 @@ export default function PexelsPhotoWidget(props) {
             try{
                 const weatherReq = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=ee94006c9bb74ce892f181126211305&q=${props.params}&days=${props.days}&aqi=no&alerts=no`);
                 const weatherData = await weatherReq.json();
-                setWeather({condition: weatherData.current.condition.text, temperature: weatherData.current.temp_c + "º C"});
+
+                const today = new Date(weatherData.location.localtime);
+                const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                const day = weekday[today.getDay()];
+                const hour = today.getHours() + ":" + (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
+
+                setWeather({
+                    condition: weatherData.current.condition.text, 
+                    temperature: weatherData.current.temp_c + "º C", 
+                    bottomLine: `${day} | ${hour} | ${weatherData.current.condition.text}`
+                });
             }
             catch(e){
                 console.log(e);
@@ -91,7 +100,7 @@ export default function PexelsPhotoWidget(props) {
                     <WidgetTitle>{props.title}</WidgetTitle>
                 </div>
                 <div className="row">
-                    <DetailsArea>{props.currentDay} | {props.hour} | {weather.condition}</DetailsArea>
+                    <DetailsArea>{weather.bottomLine}</DetailsArea>
                 </div>
             </WidgeTextArea>
         </WeatherWidgetWrapper>
